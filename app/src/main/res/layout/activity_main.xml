@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="5sp"
     android:background="#FFFFCC"
-    tools:context="com.example.android.programmercoffeecounter.MainActivity">
+    tools:context="com.example.android.programmerscoffeecounter.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -15,7 +15,6 @@
         android:gravity="center"
         android:text="Choose your coffee:"
         android:textSize="25sp" />
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,8 +41,6 @@
                 android:tag="1"
                 android:text="Cappuccino" />
 
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -51,7 +48,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
-
 
             <Button
                 android:layout_width="match_parent"
@@ -66,8 +62,6 @@
                 android:onClick="addCoffeePoints"
                 android:tag="1"
                 android:text="Americano" />
-
-
 
         </LinearLayout>
 
@@ -84,7 +78,6 @@
                 android:tag="6"
                 android:text="Tripplo" />
 
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,10 +88,7 @@
 
         </LinearLayout>
 
-
     </LinearLayout>
-
-
 
     <View
         android:layout_width="match_parent"
@@ -126,7 +116,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
 
         </LinearLayout>
 
@@ -202,9 +191,7 @@
             android:tag="+500"
             android:text="+500" />
 
-
     </LinearLayout>
-
 
     <View
         android:layout_width="match_parent"
@@ -220,7 +207,6 @@
         android:gravity="center"
         android:paddingBottom="10dp"
         android:orientation="horizontal">
-
 
         <TextView
             android:layout_width="wrap_content"
@@ -242,16 +228,13 @@
             android:text=" Coffee Points"
             android:textSize="20dp" />
 
-
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal">
-
 
         <TextView
             android:layout_width="wrap_content"
@@ -265,9 +248,6 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textSize="30dp" />
-
-
-
 
     </LinearLayout>
 
@@ -286,7 +266,6 @@
         android:layout_marginRight="100dp"
         android:layout_marginTop="5sp"
         android:background="#666666"></View>
-
 
     <Button
         android:layout_width="wrap_content"
