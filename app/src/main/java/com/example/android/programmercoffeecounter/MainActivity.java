@@ -1,4 +1,4 @@
-package com.example.android.programmercoffeecounter;
+package com.example.android.programmerscoffeecounter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
         linesOfCode = 0;
         efficiency = 0;
         display();
-
 
     }
 }
