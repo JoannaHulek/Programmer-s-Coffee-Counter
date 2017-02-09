@@ -3,12 +3,14 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:background">#FFFFCC</item>
         <item name="colorPrimary">#996633</item>
         <item name="colorPrimaryDark">#663300</item>
         <item name="colorAccent">@color/colorAccent</item>
-<item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:colorButtonNormal">#663300</item>
-        <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Button.Custom</item>
+        <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Button.Custom
+        </item>
 
     </style>
 
