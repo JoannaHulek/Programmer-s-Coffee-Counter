@@ -15,6 +15,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    
+    @Override
+    public void onRestoreInstanceState(Bundle bundle) {
+
+        super.onRestoreInstanceState(bundle);
+
+        coffeePoints = bundle.getInt("coffePoints");
+        linesOfCode = bundle.getInt("linesOfCode");
+        efficiency = bundle.getInt("efficiency");
+
+        display();
+    }
+
+    @Override
+    public void onSaveInstanceState (Bundle bundle){
+        bundle.putInt("coffePoints",coffeePoints);
+        bundle.putInt("linesOfCode",linesOfCode);
+        bundle.putInt("efficiency",efficiency);
+
+    super.onSaveInstanceState(bundle);
+    }
 
     private int coffeePoints = 0;
     private int linesOfCode = 0;
