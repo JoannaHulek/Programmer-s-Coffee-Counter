@@ -3,10 +3,18 @@ package com.example.android.programmercoffeecounter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.logging.Logger;
 
 import static android.R.attr.inAnimation;
 import static android.R.attr.lines;
+import static com.example.android.programmercoffeecounter.R.id.efficiency;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +22,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle bundle) {
+
+        super.onRestoreInstanceState(bundle);
+
+       coffeePoints = bundle.getInt("coffePoints");
+        linesOfCode = bundle.getInt("linesOfCode");
+        efficiency = bundle.getInt("efficiency");
+
+        display();
+    }
+
+    @Override
+    public void onSaveInstanceState (Bundle bundle){
+        bundle.putInt("coffePoints",coffeePoints);
+        bundle.putInt("linesOfCode",linesOfCode);
+        bundle.putInt("efficiency",efficiency);
+
+    super.onSaveInstanceState(bundle);
     }
 
     private int coffeePoints = 0;
@@ -28,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         coffeePoints += points;
 
         display();
-
     }
 
     public void addLinesOfCode(View v) {
@@ -39,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         linesOfCode += lines;
 
         display();
-
     }
 
     private void countEfficiency() {
@@ -47,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         if (coffeePoints == 0) efficiency = linesOfCode * 10;
         else if (coffeePoints < 0) efficiency = linesOfCode * 100;
         else efficiency = (linesOfCode / coffeePoints) * 2;
-
     }
 
     private void display() {
@@ -62,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
         TextView efficiencyViev = (TextView) findViewById(R.id.efficiency);
         efficiencyViev.setText(String.valueOf(efficiency));
-
     }
 
     public void reset(View v) {
@@ -71,7 +96,5 @@ public class MainActivity extends AppCompatActivity {
         linesOfCode = 0;
         efficiency = 0;
         display();
-
-
     }
 }
